@@ -18,10 +18,12 @@ const Second = () => {
 
 <View style={styles.overlayContainer}>
         <View style={styles.overlayContent}>
+        <View style={styles.heading}>
           <Text style={styles.text}>
-            <Text style={styles.blackText}>Welcome to Your</Text>
-            <Text style={styles.orangeText}> ultimate Transport Solution</Text>
+            <Text style={styles.blackText}>Book Your Ride</Text>
+            <Text style={styles.orangeText}> Anywhere, Anytime!</Text>
           </Text>
+          </View>
           <Text style={styles.loremText}>
           Get ready for a seamless and reliable ride experience with our cab app. 
           {/* Whether you're heading to work, meeting friends, or exploring the city, we're here to make your journey comfortable and efficient. Our drivers are dedicated to providing safe and timely transportation, ensuring you arrive at your destination with ease. Enjoy the convenience of hassle-free booking, real-time tracking, and exceptional service. Your journey begins with us! */}
@@ -43,6 +45,12 @@ const Second = () => {
 export default Second;
 
 const styles = StyleSheet.create({
+  heading:{
+    // fontSize:16,
+    alignItems: 'center',
+    marginLeft: '3%',
+    marginTop: 20,
+  },
   loremText: {
     fontSize: 16,
     textAlign: 'center',
@@ -55,8 +63,10 @@ const styles = StyleSheet.create({
 
   blackText: {
     color: 'black',
+    alignItems: 'center',
+    fontSize:24,textAlign: 'center',
     fontFamily: 'Montserrat-Bold',
-     paddingHorizontal: 0, // Add horizontal padding
+     paddingHorizontal: 10, // Add horizontal padding
     paddingVertical: 10,
   },
   
@@ -87,9 +97,11 @@ const styles = StyleSheet.create({
   },
 
   orangeText: {
+    alignItems: 'center',
     color: '#fea90a',
+    fontSize:24,textAlign: 'center',
     fontFamily: 'Montserrat-Bold',
-     paddingHorizontal: 0, // Add horizontal padding
+     paddingHorizontal: 20, // Add horizontal padding
     paddingVertical: 10,
   },
   orangeText2: {
@@ -113,7 +125,7 @@ const styles = StyleSheet.create({
     width: '90%',
     marginLeft: '5%',
     marginTop: '100%',
-    height: '100%',
+    height: '60%',
   },
   child : {
       flex : 1,
