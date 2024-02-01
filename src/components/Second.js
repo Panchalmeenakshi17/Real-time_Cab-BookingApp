@@ -1,17 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Home = () => {
+const Second = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Second</Text>
     </View>
   )
 }
 
-export default Home
+export default Second
 
-const styles = StyleSheet.create({
-
-
-})
+const styles = StyleSheet.create({})
