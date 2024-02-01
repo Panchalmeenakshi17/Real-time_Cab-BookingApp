@@ -114,8 +114,8 @@ const styles = StyleSheet.create({
       height : '60%',
       width : '100%',
       transform : [ { scaleX : 2 } ],
-      borderBottomStartRadius : 200,
-      borderBottomEndRadius : 200,
+      borderBottomStartRadius : 300,
+      borderBottomEndRadius : 100,
       overflow : 'hidden',
   },
   backgroundImage: {

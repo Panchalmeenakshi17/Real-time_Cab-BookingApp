@@ -1,7 +1,8 @@
 import {StyleSheet, Image, View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const GetStarted = () => {
+const GetStarted = ({navigation}) => {
+  
   return (
     <View style={styles.container}>
       {/* Background Image */}
@@ -43,7 +44,7 @@ const GetStarted = () => {
           {/* Whether you're heading to work, meeting friends, or exploring the city, we're here to make your journey comfortable and efficient. Our drivers are dedicated to providing safe and timely transportation, ensuring you arrive at your destination with ease. Enjoy the convenience of hassle-free booking, real-time tracking, and exceptional service. Your journey begins with us! */}
           </Text>
           
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity onPress={() => navigation.navigate('Second')} style={styles.button}>
             <Text style={styles.buttonText}>Get Started</Text>
           </TouchableOpacity>
           <Text style={styles.loremText2}>

@@ -18,9 +18,9 @@ const App = () => {
         headerShown: false, 
       }}
     >
-      {/* <Stack.Screen name="Home" component={Home} /> */}
-      {/* <Stack.Screen name="Landing" component={Landing} /> */}
-      {/* <Stack.Screen name="GetStarted" component={GetStarted} /> */}
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Landing" component={Landing} />
+      <Stack.Screen name="GetStarted" component={GetStarted} />
       <Stack.Screen name="Second" component={Second} />
     
 

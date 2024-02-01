@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 const Landing = ({ navigation }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.replace('Girl');
+      navigation.replace('GetStarted');
     }, 2500);
     return () => clearTimeout(timer);
   }, []);
