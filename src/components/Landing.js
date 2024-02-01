@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
-
-const Landing = () => {
+import { useNavigation } from '@react-navigation/native';
+const Landing = ({ navigation }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.replace('Girl');
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <View style={styles.base}>
       <View style={styles.container}>
