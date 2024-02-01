@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/components/Home';
 import Second from './src/components/Second';
 import Landing from './src/components/Landing';
-import Girl from './src/components/Girl';
+import GetStarted from './src/components/GetStarted';
 
 const Stack = createStackNavigator();
 
@@ -19,9 +19,9 @@ const App = () => {
       }}
     >
       {/* <Stack.Screen name="Home" component={Home} /> */}
-      <Stack.Screen name="Landing" component={Landing} />
-      <Stack.Screen name="Girl" component={Girl} />
-      <Stack.Screen name="Second" component={Second} />
+      {/* <Stack.Screen name="Landing" component={Landing} /> */}
+      <Stack.Screen name="GetStarted" component={GetStarted} />
+      {/* <Stack.Screen name="Second" component={Second} /> */}
     
 
     </Stack.Navigator>
