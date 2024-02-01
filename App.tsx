@@ -1,24 +1,28 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Landing from './src/components/Landing'
-import Navbar from './src/components/Navbar'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './src/components/Home';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.back}>
-      <Landing/>
-      {/* <Navbar/> */}
-    </View>
-  )
-}
+    <NavigationContainer>
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerShown: false, 
+      }}
+    >
+      <Stack.Screen name="Home" component={Home} />
+    
 
-export default App
-
-const styles = StyleSheet.create({
-
-  back:{
-backgroundColor: '#eb8d00',
-height:800,
-  },
-
-})
+    </Stack.Navigator>
+    </NavigationContainer>
+      );
+    }
+    
+    export default App
+    
+    const styles = StyleSheet.create({})
