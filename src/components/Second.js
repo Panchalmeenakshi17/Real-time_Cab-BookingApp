@@ -9,7 +9,7 @@ const Second = () => {
     <View style={styles.child1}>
     
     <Image
-        source={require('../assets/images/4.jpg')}
+        source={require('../assets/images/s.png')}
         style={styles.backgroundImage}
       />
     </View>
@@ -108,12 +108,12 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    // resizeMode: 'cover', // or 'stretch' or 'contain'
-    // position: 'absolute',
-    width: '60%',
+    resizeMode: 'cover', // or 'stretch' or 'contain'
+    position: 'absolute',
+    width: '90%',
     marginLeft: '5%',
-    // marginTop: '100%',
-    height: '60%',
+    marginTop: '100%',
+    height: '100%',
   },
   child : {
       flex : 1,
@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
       flex : 1,
       // transform : [ { scaleX : 0.9 } ],
 // width:'50%',
-marginTop:20,
       backgroundColor : '#fea90a',
       alignItems : 'center',
       justifyContent : 'center'
