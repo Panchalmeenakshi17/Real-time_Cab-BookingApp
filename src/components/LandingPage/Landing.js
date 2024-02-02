@@ -14,7 +14,7 @@ const Landing = ({ navigation }) => {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require('../assets/images/taxi1.jpg')}
+            source={require('../../assets/images/taxi1.jpg')}
           />
         </View>
         <Text style={styles.text}>Taxi Booking App</Text>

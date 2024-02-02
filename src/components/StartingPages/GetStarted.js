@@ -4,19 +4,47 @@ import React from 'react';
 const GetStarted = ({navigation}) => {
   
   return (
-    <View style={styles.container}>
-      {/* Background Image */}
+    <>
+
+  
+    {/* Background Image */}
+      <View style={styles.parent}>
+      <View style={styles.child}>
+
       <Image
-        source={require('../assets/images/me2.png')}
+        source={require('../../assets/images/me2.png')}
         style={styles.backgroundImage}
       />
-      <View style={styles.overlayContainer2}>
-        <View style={styles.overlayContent}>
-          <Image
-            source={require('../assets/images/placeholder.png')}
-            style={styles.Image}
+ 
+      <Image
+      source={require('../../assets/images/placeholder.png')}
+      style={styles.Image}
+      />
+      <Image
+            source={require('../../assets/images/text.png')}
+            style={styles.Image2}
           />
+
           <Image
+            source={require('../../assets/images/agent.png')}
+            style={styles.Image3}
+          />
+
+          <Image
+          source={require('../../assets/images/telephone.png')}
+          style={styles.Image4}
+          />
+        </View>
+        </View>
+        
+    
+      {/* <View style={styles.overlayContainer2}>
+      <View style={styles.overlayContent}>
+      <Image
+      source={require('../assets/images/placeholder.png')}
+      style={styles.Image}
+      />
+      <Image
             source={require('../assets/images/text.png')}
             style={styles.Image2}
           />
@@ -27,13 +55,13 @@ const GetStarted = ({navigation}) => {
           />
 
           <Image
-            source={require('../assets/images/telephone.png')}
-            style={styles.Image4}
+          source={require('../assets/images/telephone.png')}
+          style={styles.Image4}
           />
         </View>
-      </View>
+      </View> */}
 
-      <View style={styles.overlayContainer}>
+      {/* <View style={styles.overlayContainer}> */}
         <View style={styles.overlayContent}>
           <Text style={styles.text}>
             <Text style={styles.blackText}>Welcome to Your</Text>
@@ -51,12 +79,28 @@ const GetStarted = ({navigation}) => {
             Already have an account ? <Text style={styles.orangeText2}>Log In</Text>
           </Text>
         </View>
-      </View>
-    </View>
+      {/* </View> */}
+      </>
   );
 };
 
 const styles = StyleSheet.create({
+  child : {
+    flex : 1,
+    transform : [ { scaleX : 0.5 } ],
+
+    backgroundColor : '#fea90a',
+    alignItems : 'center',
+    justifyContent : 'center'
+},
+  parent:{
+    height : '60%',
+      width : '100%',
+      transform : [ { scaleX : 2 } ],
+      borderBottomStartRadius : 300,
+      borderBottomEndRadius : 100,
+      overflow : 'hidden',
+  },
   container: {
     flex: 1,
     backgroundColor: '#e6dede5b',
@@ -84,10 +128,13 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover', // or 'stretch' or 'contain'
     position: 'absolute',
-    width: '90%',
+    width: '100%',
     marginLeft: '5%',
     marginTop: '15%',
-    height: '50%',
+    height: '100%',
+    transform : [ { scaleX : 1 } ],
+    borderBottomStartRadius : 300,
+    borderBottomEndRadius : 100,
   },
   overlayContainer: {
     flex: 1,
@@ -95,7 +142,7 @@ const styles = StyleSheet.create({
   },
   overlayContainer2: {
     flex: 1,
-    backgroundColor: 'rgba(189, 177, 177, 0.189)',
+    backgroundColor: 'rgba(189, 177, 177, 0)',
   },
   overlayContent: {},
   text: {
@@ -111,16 +158,17 @@ const styles = StyleSheet.create({
   Image: {
     width: '10%',
     height: '20%',
-    marginTop: '30%',
-    marginLeft: '16%',
+    // marginTop: '30%',
+    marginRight: '70%',
 
     resizeMode: 'contain',
   },
   Image2: {
     width: '10%',
     height: '20%',
-    marginTop: '20%',
-    marginLeft: '5%',
+    marginTop: '1%',
+    // marginRight: '40%',
+    marginLeft: '90%',
     resizeMode: 'contain',
   },
   Image3: {
@@ -134,8 +182,8 @@ const styles = StyleSheet.create({
     width: '8%',
     height: '8%',
 
-    marginLeft: '85%',
-    bottom: 105,
+    marginRight: '90%',
+    bottom: 90,
   },
 
   loremText: {
