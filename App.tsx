@@ -25,7 +25,7 @@ const App = () => {
     <>
      <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Accept"
+        initialRouteName="Landing"
         screenOptions={{
           headerShown: false,
         }}>

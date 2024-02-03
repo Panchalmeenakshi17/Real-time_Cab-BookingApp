@@ -57,7 +57,7 @@ const Profile = ({navigation}) => {
           </View>
           <View></View>
           
-          <TouchableOpacity onPress={() => navigation.navigate('Otp')} style={styles.button}>
+          <TouchableOpacity onPress={() => navigation.navigate('AppNavigator')} style={styles.button}>
             <Text style={styles.buttonText}>Complete Profile</Text>
           </TouchableOpacity>
         </View>
