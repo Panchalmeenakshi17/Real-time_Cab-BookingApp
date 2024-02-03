@@ -36,7 +36,7 @@ const Home = ({navigation, route}) => {
     const getLocation = () => {
       GetLocation.getCurrentPosition({
         enableHighAccuracy: false,
-        timeout: 5000,
+        timeout: 10000,
         maximumAge: 10000,
       })
         .then(async location => {
@@ -93,7 +93,7 @@ const Home = ({navigation, route}) => {
         <MapView
           ref={mapRef}
           style={{flex: 1}}
-          provider={PROVIDER_GOOGLE} // Add this line
+          provider={PROVIDER_GOOGLE}
           showsUserLocation={false}
           showsMyLocationButton={false}
           initialRegion={{
@@ -115,8 +115,7 @@ const Home = ({navigation, route}) => {
                 latitude: latitude,
                 longitude: longitude,
               }}
-              pinColor="#1a0080"
-              identifier="destinationMarker" // Add this line
+              pinColor="green"
             />
           )}
         </MapView>
@@ -141,7 +140,9 @@ const Home = ({navigation, route}) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Ionicons name="menu" size={27} color="grey" />
+           
+            {/* <Ionicons name="menu" size={27} color="grey" /> */}
+          <Text style={{ width:29, textAlign:'center', fontSize:20, }}>☰</Text>
           </View>
 
           <View
@@ -154,7 +155,8 @@ const Home = ({navigation, route}) => {
               alignItems: 'center',
               gap: 5,
             }}>
-            <Entypo name="circle" size={18} color="green" />
+            {/* <Entypo name="circle" size={18} color="green" /> */}
+            <Text>🔍</Text>
             <TextInput
               style={{flex: 1}}
               value={origin}
@@ -188,7 +190,8 @@ const Home = ({navigation, route}) => {
               alignItems: 'center',
               gap: 10,
             }}>
-            <Ionicons name="search" color="black" size={25} />
+            {/* <Ionicons name="search" color="black" size={25} /> */}
+            <Text>🔍</Text>
             <TextInput
               style={{flex: 1, color: 'black'}}
               value={formatted_address}
