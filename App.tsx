@@ -12,6 +12,10 @@ import Signin from './src/components/Account/Signin';
 import Login from './src/components/Account/Login';
 import Otp from './src/components/Otp/Otp';
 import Profile from './src/components/Profile/Profile';
+import Location from './src/components/Location/Location';
+import New from './src/components/Account/New';
+import Notification from './src/components/StartingPages/Notification';
+import Accept from './src/components/Account/Accept';
 
 const Stack = createStackNavigator();
 
@@ -21,7 +25,7 @@ const App = () => {
     <>
      <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Landing"
+        initialRouteName="Accept"
         screenOptions={{
           headerShown: false,
         }}>
@@ -35,6 +39,10 @@ const App = () => {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Otp" component={Otp} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Location" component={Location} />
+        <Stack.Screen name="New" component={New} />
+        <Stack.Screen name="Notification" component={Notification} />
+        <Stack.Screen name="Accept" component={Accept} />
       </Stack.Navigator>
     </NavigationContainer>
     
